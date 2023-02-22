@@ -1,0 +1,176 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+html {
+    min-height: 100vh;
+}
+
+body
+{
+    font-family: proxima-nova,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
+    color: rgb(23, 25, 28);
+    min-height: 100vh;
+}
+
+header
+{
+    color: #fff;
+    padding: 1vh 2vw 1vh 2vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform .8s cubic-bezier(.2,1,.2,1),min-height .3s ease-in-out,background-color .2s ease-in-out,filter .3s ease-in-out;
+
+    background: #59adeb;
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #59adeb 0%, #42c2b5 52%, #34ce93 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #59adeb 0%, #42c2b5 52%, #34ce93 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #59adeb 0%, #42c2b5 52%, #34ce93 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#59adeb', endColorstr='#34ce93', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    background-size: 350% 350%;
+    animation: waveColors 8s ease infinite;
+}
+
+input[type="text"] {
+    border: 2px solid #DADDEC;
+    margin: 5px 0 10px;
+    font-size: 1rem;
+    color: #656880;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-image: linear-gradient(to right, #89CAFF, #6589FF);
+    display: block;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 20px #89caff94;
+    transition: box-shadow .3s ease-in-out;
+    border-radius: 4px;
+}
+
+.box {
+    margin-top: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form_rooms {
+    padding: 12px 12px 12px 12px;
+    border-radius: 6px;
+    background: #59aeeb25;
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #59aeeb52 0%, #42c2b54b 52%, #34ce9357 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #59aeeb46 0%, #42c2b550 52%, #34ce9344 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #59aeeb3f 0%, #42c2b549 52%, #34ce9348 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#59adeb', endColorstr='#34ce93', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    background-size: 350% 350%;
+    animation: waveColors 8s ease infinite;
+}
+
+@-webkit-keyframes waveColors {
+    0% {
+      background-position: 0% 7%;
+    }
+    50% {
+      background-position: 100% 94%;
+    }
+    100% {
+      background-position: 0% 7%;
+    }
+  }
+  
+  @keyframes waveColors {
+    0% {
+      background-position: 0% 7%;
+    }
+    50% {
+      background-position: 100% 94%;
+    }
+    100% {
+      background-position: 0% 7%;
+    }
+  }

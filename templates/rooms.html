@@ -1,0 +1,28 @@
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css" /> 
+        <title>Board Online</title>
+    </head>
+    <body>
+        <header>
+            <h1>Board Online</h1>
+            <span>{{nickname}}</span>
+        </header>
+        <main>
+            <div class="box">
+                <form class="form_rooms" method="POST" action="{{ url_for('create_room') }}">
+                    <label for="room_name">Room Name:</label>
+                    <input type="text" name="room_name" required>
+                    <input type="submit" value="Create Room">
+                </form>   
+                <form class="form_rooms" method="POST" action="{{ url_for('join_room') }}">
+                    <label for="room_id">Room ID:</label>
+                    <input type="text" name="room_id" required>
+                    <input type="submit" value="Join Room">
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
